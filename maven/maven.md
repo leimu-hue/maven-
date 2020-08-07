@@ -245,3 +245,9 @@ keytool -import -alias 别名 -file 文件路径 -keystore "%JAVA_HOME%/jre/lib/
 或者
 
  keytool -importcert -noprompt -trustcacerts -alias 别名 -file 文件路径 -keystore "%JAVA_HOME%\jre\lib\security\cacerts" -storepass changeit
+
+##### 3、出现下面错误：
+
+https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of nexus has elapsed or updates are forced. Original error: Could not transfer artifact
+
+可以使用**mvn compile**命令进行清空，重新下载即可解决问题
